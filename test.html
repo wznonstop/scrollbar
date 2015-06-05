@@ -1,0 +1,70 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>webkit浏览器css设置滚动条</title>
+		<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0 auto;
+		}
+		#scroll-1 {
+			width:2700px;
+			height:1300px;
+			margin-top: 30px;
+			padding: 15px;
+			/*border: 5px solid #00A2E8;*/
+			overflow:auto;
+			background-color: yellow;
+		}
+		/*滚动条整体部分，其中的属性有width,height,background,border（就和一个块级元素一样）等。（位置1）*/
+		#scroll-1::-webkit-scrollbar {
+			width:15px;
+			height:15px;
+		}
+		/*滚动条两端的按钮。可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果。（位置2）*/
+		#scroll-1::-webkit-scrollbar-button    {
+			background-color:#FF7F27;
+		}
+		/*外层轨道。可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果（位置3）
+		PS:不是很理解到底在什么地方，而且测试之后发现没有什么效果*/
+		#scroll-1::-webkit-scrollbar-track     {
+			background:#4C0AE1;
+		}
+		/*内层轨道，滚动条中间部分（位置4）*/
+		#scroll-1::-webkit-scrollbar-track-piece {
+			background:#b4f292;
+		}
+		/*滚动条里面可以拖动的那部分（位置5）*/
+		#scroll-1::-webkit-scrollbar-thumb{
+			background:#04FB27;
+			border-radius:8px;
+		}
+		/*边角（位置6）*/
+		#scroll-1::-webkit-scrollbar-corner {
+			background:#82AFFF;
+		}
+		/*定义右下角拖动块的样式（位置7）*/
+		#scroll-1::-webkit-scrollbar-resizer  {
+			background:#FF0BEE;
+		}
+		</style>
+	</head>
+	<body id="scroll-1">
+		<pre>javascript   javascript   javascript   javascript   javascript   javascript   javascript   javascript   javascript   javascript   javascript   javascript   
+			javascript
+			javascript
+			javascript
+			javascript
+			javascript
+			javascript
+			javascript
+			javascript
+			javascript
+			javascript
+			javascript
+			javascript
+			javascript
+		</pre>
+	</body>
+</html>
